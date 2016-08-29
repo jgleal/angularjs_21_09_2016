@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <h1>Ejemplo AngularJsApp</h1>        
+        <div ng-app="listaDeTareas" ng-cloak ng-controller="ctrlTareas" class="w3-card-2 w3-margin" style="max-width:400px;">
+            <header class="w3-container w3-light-grey w3-padding-16">
+                <h3>Lista de tareas</h3>
+            </header>
+            <ul class="w3-ul">
+                <li ng-repeat="x in tareas" ng-mouseover="seleccion($index)" class="w3-padding-16">{{x}}<span ng-click="borrarTarea($index)" style="cursor:pointer;" class="w3-right w3-margin-right">×</span></li>
+            </ul>
+            <div class="w3-container w3-light-grey w3-padding-16">
+                <div class="w3-row w3-margin-top">
+                    <div class="w3-col s10">
+                        <input placeholder="Añadir tareas aquí" ng-model="nueva" class="w3-input w3-border w3-padding">
+                    </div>
+                    <div class="w3-col s2">
+                        <button ng-click="nuevaTarea()" class="w3-btn w3-padding w3-green">Añadir</button>
+                    </div>
+                </div>
+                <p class="w3-padding-left w3-text-red">{{errortext}}</p>
+            </div>
+            <div class="w3-container w3-light-grey w3-padding-16">
+                <div class="w3-row w3-margin-top">
+                    <div class="w3-col s9">
+                        <input placeholder="Tarea a actualizar" ng-model="paraActualizar" class="w3-input w3-border w3-padding">
+                    </div>
+                    <div class="w3-col s3">
+                        <button ng-click="actualizarTarea()" class="w3-btn w3-padding w3-green">Actualizar</button>
+                    </div>
+                </div>
+                <p class="w3-padding-left w3-text-red">{{errortext}}</p>
+            </div>            
+        </div>
+        <!--
+                <div ng-app="listaDeTareas" ng-controller="ctrlTareas">
+                    <ul>
+                        <li ng-repeat="x in tareas">
+                            {{x}}
+                            <span ng-click="borrarTarea($index)">&times;</span>
+                        </li>
+                    </ul>
+                    <input ng-model="nueva">
+                    <button ng-click="nuevaTarea()">Añadir</button>
+                    <p>{{errortext}}</p>
+                </div>-->
+    </body>
+</html>
