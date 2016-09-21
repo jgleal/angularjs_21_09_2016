@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+  <head>
+    <script data-require="angular.js@1.5.9" data-semver="1.5.9" src="https://code.angularjs.org/1.5.8/angular.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <script>
+  $scope.test = function(text) {
+  alert(text);
+}
+  </script>
+  <body>
+    <h1>Introducción a AngularJS</h1>
+    <div ng-app>
+      <label>Nombre:</label>
+      <input type="text" placeholder="Introduce el nombre" ng-model="nombre"/>
+      <h2>El nombre es {{nombre}}</h2>
+      <button onclick="alert('js')" ng-click="test('ng');">JS</button>
+
+    </div>
+  </body>
+
+</html>

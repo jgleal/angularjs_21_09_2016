@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script data-require="angular.js@1.5.8" data-semver="1.5.8" src="https://code.angularjs.org/1.5.8/angular.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+
+<body ng-app="repeat" ng-controller="repeatCtrl">
+  <h1>Colecciones de objetos</h1>
+  <ul ng-repeat="nombre in nombres">
+    <li ng-click="borrar($index)">{{nombre}}</li>
+  </ul>
+</body>
+
+</html>

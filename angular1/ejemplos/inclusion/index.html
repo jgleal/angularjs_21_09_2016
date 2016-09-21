@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script data-require="angular.js@1.5.8" data-semver="1.5.8" src="https://code.angularjs.org/1.5.8/angular.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+
+<body ng-app="crud">
+  <h1>Uso de $http</h1>
+  <div ng-controller="estaticoCtrl">
+    <p>Inclusión de una página html empleando el servicio $http. <strong>El html no se interpreta</strong></p>
+    <code>{{paginaEstatica}}</code>
+    <p>Lo mismo usando la directiva {{"ng-include" | uppercase}}</p>
+    <div ng-include="'incluido.html'"></div>
+    <p>Inclusión de una página dinámica</p>
+    <div ng-include="'dinamico.html'"></div>
+  </div>
+</body>
+
+</html>

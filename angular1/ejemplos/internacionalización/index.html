@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script data-require="angular.js@1.5.9" data-semver="1.5.9" src="https://code.angularjs.org/1.5.8/angular.js"></script>
+  <script src="https://code.angularjs.org/1.5.8/i18n/angular-locale_es-es.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <h1>Internacionalización</h1>
+  <div ng-app="principal" ng-controller="testCtrl">
+    {{tasas | currency }}
+    <br/>
+    <br/> {{fechaAdmision | date }}
+    <br/>
+    <br/> {{id | number }}
+  </div>
+
+  <script>
+    var principal = angular.module("principal", []);
+
+    principal.controller('testCtrl', function($scope) {
+      $scope.tasas = 100;
+      $scope.fechaAdmision = new Date();
+      $scope.id = 123.45;
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+  <script data-require="angular.js@1.5.9" data-semver="1.5.9" src="https://code.angularjs.org/1.5.8/angular.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <h1>Uso de ng-bind</h1>
+  <div ng-app>
+    <label>Nombre:</label>
+    <input type="text" placeholder="Introduce el nombre" ng-model="nombre" />
+    <h2 ng-bind="nombre">En h2. El nombre es</h2>
+  </div>
+  <div ng-app ng-init="nombre='Nombre uno'">
+    <p>En p.El nombre es <span ng-bind="nombre"></span></p>
+  </div>
+</body>
+
+</html>

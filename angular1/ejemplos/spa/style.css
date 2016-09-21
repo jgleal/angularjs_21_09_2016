@@ -1,0 +1,22 @@
+/* Styles go here */
+
+.uno {
+  color: blue;
+}
+
+.dos {
+  color: orange;
+}
+
+.tres {
+  color: brown;
+}
+
+.cuatro {
+  color: red;
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+  <script data-require="angular.js@1.5.8" data-semver="1.5.8" src="https://code.angularjs.org/1.5.8/angular.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body ng-app="formulario" ng-controller="formCtrl">
+  <h1>Formularios con validaciones</h1>
+  <form name="formulario">
+    <div class="form-group">
+      <label for="email">Correo electrónico:</label>
+      <input type="email" class="form-control" id="email" ng-model="datos.correo">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Clave de acceso:</label>
+      <input type="password" class="form-control" id="pwd" name="pwd" ng-model="datos.clave" required validar-longitud>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" ng-model="datos.recordarme"> Recordarme</label>
+    </div>
+    <button type="submit" class="btn btn-default" ng-click="enviar()">Enviar</button>
+  </form>
+  <div class="alert alert-success">
+    <strong>Datos del formulario:</strong> {{datos | json}}
+  </div>
+  <div class="alert alert-warning">
+    <strong>La clave es válida </strong> {{formulario.pwd.$valid}}
+  </div>
+  <div class="alert alert-info">
+    <strong>El valor será visible cuando la clave tenga menos de cinco caracteres: </strong> {{formulario.pwd.$error.textoCorto}}
+  </div>
+</body>
+
+</html>

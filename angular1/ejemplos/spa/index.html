@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script data-require="angular.js@1.5.8" data-semver="1.5.8" src="https://code.angularjs.org/1.5.8/angular.js"></script>
+  <script data-require="angular-route@1.5.8" data-semver="1.5.8" src="https://code.angularjs.org/1.5.8/angular-route.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+
+<body ng-app="spa">
+  <h1>Aplicaciones de una única página (SPA)</h1>
+  <h2>Esta es la página principal</h2>
+  <ul>
+    <li><a href="#/">Página uno</a></li>
+    <li><a href="#dos">Página dos</a></li>
+    <li><a href="#tres/1234">Página tres</a></li>
+    <li><a href="#noexiste">Enlace roto</a></li>
+  </ul>
+  <div><strong>Página actual</strong></div>
+  <div ng-view></div>
+</body>
+
+</html>

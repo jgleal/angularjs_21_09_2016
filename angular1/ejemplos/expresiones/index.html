@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script data-require="angular.js@1.5.9" data-semver="1.5.9" src="https://code.angularjs.org/1.5.8/angular.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+
+<body ng-app>
+  <h1>Uso de expresiones</h1>
+  <ul>
+    <li>Expresión sencilla {{4*4}}</li>
+    <li>
+      <div ng-init="fuente='Arial'">
+        <input style="font-family:{{fuente}}" ng-model="fuente" value="{{fuente}}">
+      </div>
+    </li>
+    <li ng-init="cantidad=10;coste=10">
+      Números {{cantidad*coste}}
+    </li>
+    <li ng-init="uno='uno';dos='dos'">
+      Strings: {{uno +' '+ dos}}
+    </li>
+    <li ng-init="producto={id:1,precio:1000,nombre:'TV'}">
+      Objetos: {{producto.id + ' '+producto.precio +' '+producto.nombre}}
+    </li>
+    <li ng-init="numeros=[1,2,3,4,5]">
+      <p>Arrays: {{numeros[0]}}</p>
+      <p ng-repeat="n in numeros">Valor: {{$index + n}}</p>
+    </li>
+  </ul>
+</body>
+
+</html>

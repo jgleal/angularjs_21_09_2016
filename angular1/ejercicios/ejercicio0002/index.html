@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script data-require="angular.js@1.5.8" data-semver="1.5.8" src="https://code.angularjs.org/1.5.8/angular.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <h1>Ejercicio uno</h1>
+    <h2>Uso de modelos con valores por defecto y expresiones</h2>
+    <div ng-app="" ng-init="texto='Nombre uno'">
+      <input ng-model="texto" type="text" placeholder="Introduce un texto" />
+      <br />
+      <label>La longitud del texto es: {{texto.length || 0}}</label>
+    </div>
+  </body>
+
+</html>
